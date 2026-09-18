@@ -1,0 +1,199 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  overflow: visible;
+  transition: background var(--transition-normal), box-shadow var(--transition-normal), padding var(--transition-normal), border-color var(--transition-normal);
+  padding-block: 20px;
+  background: rgba(253, 250, 247, 0.92);
+  border-bottom: 1px solid transparent;
+  --header-height: 76px; /* altura aproximada no estado normal */
+}
+
+.header.scrolled {
+  background: rgba(253, 250, 247, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 2px 20px rgba(200, 120, 74, 0.12);
+  border-bottom: 1px solid var(--color-border);
+  padding-block: 12px;
+  --header-height: 60px; /* altura quando scrolled */
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  transition: opacity var(--transition-fast);
+}
+.logo:hover { opacity: 0.85; }
+
+.logoIcon {
+  flex-shrink: 0;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logoName {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  letter-spacing: -0.01em;
+}
+
+.logoTagline {
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Desktop Nav */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  /* margin-left: auto movido para .actions para funcionar no mobile */
+}
+
+.navLink {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-subtle);
+}
+
+/* Actions — margin-left:auto garante que fique sempre à direita,
+   inclusive no mobile quando .nav some */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.ctaBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(200,120,74,0.35);
+}
+
+.ctaBtn:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(200,120,74,0.45);
+}
+
+.menuBtn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;  /* mínimo recomendado para touch targets */
+  height: 44px;
+  border-radius: var(--radius-sm);
+  color: var(--color-primary-dark);
+  background: var(--color-primary-subtle);
+  border: 1px solid rgba(200,120,74,0.2);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+  /* Propriedades essenciais para touch em mobile real */
+  touch-action: manipulation;       /* elimina delay de 300ms */
+  -webkit-tap-highlight-color: transparent; /* remove flash cinza no iOS/Android */
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.menuBtn:hover,
+.menuBtn:active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* Mobile Menu — position:fixed para sair do stacking context do header
+   e garantir visibilidade e clicabilidade em dispositivos reais */
+.mobileMenu {
+  position: fixed;
+  top: var(--header-height, 76px);
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  animation: fadeIn 0.2s ease;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px 24px;
+  gap: 4px;
+}
+
+.mobileNavLink {
+  padding: 12px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.mobileNavLink:hover {
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+}
+
+.mobileCtaBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 14px 20px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-full);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav { display: none; }
+  .ctaBtn { display: none; }
+  .menuBtn { display: flex; }
+}

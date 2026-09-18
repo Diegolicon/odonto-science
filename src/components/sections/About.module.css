@@ -1,0 +1,141 @@
+.about {
+  background: var(--color-bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+/* Image Grid */
+.imageGrid {
+  position: relative;
+  height: 480px;
+}
+
+.imgCard {
+  position: absolute;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.imgCard1 {
+  top: 0;
+  left: 0;
+  width: 58%;
+  height: 64%;
+}
+.imgCard2 {
+  top: 0;
+  right: 0;
+  width: 38%;
+  height: 44%;
+}
+.imgCard3 {
+  bottom: 0;
+  left: 16%;
+  width: 68%;
+  height: 40%;
+}
+
+.imgFill {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Experience Badge */
+.expBadge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+  min-width: 100px;
+}
+.expNumber {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.expText {
+  font-size: 0.7rem;
+  font-weight: 500;
+  opacity: 0.9;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+/* Content */
+.content {}
+
+.sectionTag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  padding: 4px 12px;
+  background: var(--color-primary-subtle);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(200,120,74,0.2);
+}
+
+.accent {
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+.differentials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+.differentialItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+.checkIcon {
+  flex-shrink: 0;
+  color: var(--color-primary);
+}
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  box-shadow: 0 4px 16px rgba(200,120,74,0.35);
+}
+.learnMore:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; gap: 48px; }
+  .imageGrid { height: 320px; }
+}
