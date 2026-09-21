@@ -43,16 +43,6 @@ export default function Hero() {
               Ver Serviços
             </a>
           </div>
-
-          {/* Stats */}
-          <div className={styles.stats}>
-            {STATS.map((stat) => (
-              <div key={stat.label} className={styles.stat}>
-                <span className={styles.statValue}>{stat.value}</span>
-                <span className={styles.statLabel}>{stat.label}</span>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Right — Real Image */}
@@ -65,7 +55,7 @@ export default function Hero() {
                 fill
                 className={styles.image}
                 priority
-                sizes="(max-width: 900px) 0px, 50vw"
+                sizes="(max-width: 900px) 92vw, 50vw"
               />
             </div>
 
@@ -86,6 +76,16 @@ export default function Hero() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Stats */}
+        <div className={styles.stats}>
+          {STATS.map((stat) => (
+            <div key={stat.label} className={styles.stat}>
+              <span className={styles.statValue}>{stat.value}</span>
+              <span className={styles.statLabel}>{stat.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
