@@ -39,8 +39,8 @@ export default function Header() {
             </svg>
           </div>
           <div className={styles.logoText}>
-            <span className={styles.logoName}>Odonto Science</span>
-            <span className={styles.logoTagline}>Odontologia Estética</span>
+            <span className={styles.logoName}>{CLINIC.name}</span>
+            <span className={styles.logoTagline}>{CLINIC.specialty}</span>
           </div>
         </Link>
 

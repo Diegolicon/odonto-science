@@ -5,7 +5,7 @@ import { CLINIC } from "@/lib/constants";
 export const metadata: Metadata = {
   title: `${CLINIC.name} | Odontologia Estética em Palmas-TO`,
   description:
-    "Clínica odontológica humanizada e multidisciplinar em Palmas-TO. Especialistas em lentes de contato dental, implantes, harmonização facial, clareamento e muito mais. Agende já!",
+    `${CLINIC.name} - Clínica odontológica de excelência na Praça dos Girassóis em Palmas-TO. Especialistas em lentes de contato dental, implantes, harmonização orofacial e ortodontia estética.`,
   keywords: [
     "odontologia estética Palmas TO",
     "lentes de contato dental Palmas",
@@ -14,12 +14,13 @@ export const metadata: Metadata = {
     "clareamento dental Palmas",
     "dentista Palmas TO",
     "ortodontia Palmas",
-    "Odonto Science",
+    "Praça dos Girassóis dentista",
+    CLINIC.name,
   ],
   openGraph: {
-    title: `${CLINIC.name} | Odontologia Estética em Palmas-TO`,
+    title: `${CLINIC.name} | Odontologia Estética na Praça dos Girassóis`,
     description:
-      "Odontologia humanizada e multidisciplinar. Transformamos sorrisos em Palmas-TO desde 2009.",
+      `${CLINIC.tagline}. Transformando sorrisos em Palmas-TO desde ${CLINIC.founded}.`,
     type: "website",
     locale: "pt_BR",
   },

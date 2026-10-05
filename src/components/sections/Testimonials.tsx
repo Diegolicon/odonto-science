@@ -34,19 +34,12 @@ export default function Testimonials() {
           </button>
 
           <div className={styles.track}>
-            {TESTIMONIALS.map((t, idx) => {
-              const offset = idx - current;
-              const visible =
-                offset === 0 ||
-                offset === 1 ||
-                (current === TESTIMONIALS.length - 1 && idx === 0);
-
-              return (
-                <div
-                  key={t.id}
-                  className={`${styles.card} ${idx === current ? styles.cardActive : ""}`}
-                  aria-hidden={idx !== current}
-                >
+            {TESTIMONIALS.map((t, idx) => (
+              <div
+                key={t.id}
+                className={`${styles.card} ${idx === current ? styles.cardActive : ""}`}
+                aria-hidden={idx !== current}
+              >
                   {/* Stars */}
                   <div className={styles.stars}>
                     {Array.from({ length: t.rating }).map((_, i) => (
@@ -67,8 +60,7 @@ export default function Testimonials() {
                     </div>
                   </div>
                 </div>
-              );
-            })}
+            ))}
           </div>
 
           <button

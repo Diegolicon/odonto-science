@@ -39,19 +39,6 @@ export default function Team() {
               </div>
             </div>
           ))}
-
-          {/* Placeholder for more doctors */}
-          <div className={`${styles.card} ${styles.cardAdd}`}>
-            <div className={styles.addInner}>
-              <div className={styles.addIcon}>+</div>
-              <p className={styles.addText}>
-                Em breve mais especialistas serão apresentados aqui.
-              </p>
-              <p className={styles.addSub}>
-                Nossa equipe está crescendo para melhor atendê-lo.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>

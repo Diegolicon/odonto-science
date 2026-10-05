@@ -14,7 +14,7 @@ export default function Hero() {
         <div className={styles.content}>
           <div className={styles.badge}>
             <span className={styles.badgeDot} />
-            Odontologia Estética em Palmas-TO
+            {CLINIC.specialty} • Praça dos Girassóis, Palmas-TO
           </div>
 
           <h1 className={`heading-xl ${styles.headline}`}>
@@ -23,7 +23,7 @@ export default function Hero() {
           </h1>
 
           <p className={`body-lg ${styles.subtitle}`}>
-            Odontologia humanizada e multidisciplinar. Especialistas dedicados
+            {CLINIC.tagline}. Especialistas dedicados
             a transformar sorrisos com tecnologia, cuidado e atenção personalizada.
           </p>
 
@@ -51,7 +51,7 @@ export default function Hero() {
             <div className={styles.imageContainer}>
               <Image
                 src="/images/hero-smile.jpg"
-                alt="Paciente com sorriso perfeito na Odonto Science"
+                alt={`Paciente com sorriso perfeito na ${CLINIC.name}`}
                 fill
                 className={styles.image}
                 priority
@@ -71,8 +71,8 @@ export default function Hero() {
             <div className={`${styles.floatCard} ${styles.floatCardBottom}`}>
               <div className={styles.floatCardIcon}>🦷</div>
               <div>
-                <div className={styles.floatCardTitle}>+5.000 pacientes</div>
-                <div className={styles.floatCardSub}>Satisfeitos desde 2009</div>
+                <div className={styles.floatCardTitle}>+4.000 pacientes</div>
+                <div className={styles.floatCardSub}>Satisfeitos desde {CLINIC.founded}</div>
               </div>
             </div>
           </div>

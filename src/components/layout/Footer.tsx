@@ -34,13 +34,13 @@ export default function Footer() {
               </svg>
             </div>
             <div>
-              <div className={styles.logoName}>Odonto Science</div>
-              <div className={styles.logoTagline}>Odontologia Estética</div>
+              <div className={styles.logoName}>{CLINIC.name}</div>
+              <div className={styles.logoTagline}>{CLINIC.specialty}</div>
             </div>
           </a>
           <p className={styles.brandDesc}>
-            Odontologia humanizada e multidisciplinar em Palmas-TO.
-            Transformando sorrisos desde 2009.
+            {CLINIC.tagline} em Palmas-TO.
+            Transformando sorrisos e valorizando sua autoestima com excelência.
           </p>
           <div className={styles.social}>
             <a
@@ -48,7 +48,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialLink}
-              aria-label="Instagram Odonto Science"
+              aria-label={`Instagram ${CLINIC.name}`}
             >
               <ExternalLink size={20} />
             </a>
@@ -57,7 +57,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.socialLink}
-              aria-label="WhatsApp Odonto Science"
+              aria-label={`WhatsApp ${CLINIC.name}`}
             >
               <Phone size={20} />
             </a>
@@ -122,7 +122,7 @@ export default function Footer() {
       <div className={styles.bottom}>
         <div className="container">
           <p className={styles.bottomText}>
-            © {new Date().getFullYear()} Odonto Science. Todos os direitos reservados.
+            © {new Date().getFullYear()} {CLINIC.name}. Todos os direitos reservados.
           </p>
         </div>
       </div>

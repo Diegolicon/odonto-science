@@ -7,8 +7,8 @@ const DIFFERENTIALS = [
   "Atendimento totalmente personalizado",
   "Equipe de especialistas certificados",
   "Ambiente acolhedor e humanizado",
-  "Tecnologia de última geração",
-  "Mais de 15 anos de experiência",
+  "Tecnologia e escaneamento digital",
+  "Tratamentos com máxima previsibilidade",
 ];
 
 export default function About() {
@@ -21,7 +21,7 @@ export default function About() {
             <div className={`${styles.imgCard} ${styles.imgCard1}`}>
               <Image
                 src="/images/clinic-interior.jpg"
-                alt="Interior moderno do consultório Odonto Science"
+                alt={`Interior moderno do consultório ${CLINIC.name}`}
                 fill
                 className={styles.imgFill}
                 sizes="30vw"
@@ -39,7 +39,7 @@ export default function About() {
             <div className={`${styles.imgCard} ${styles.imgCard3}`}>
               <Image
                 src="/images/clinic-reception.jpg"
-                alt="Recepção da clínica Odonto Science"
+                alt={`Recepção da clínica ${CLINIC.name}`}
                 fill
                 className={styles.imgFill}
                 sizes="35vw"
@@ -47,7 +47,7 @@ export default function About() {
             </div>
             {/* Experience badge */}
             <div className={styles.expBadge}>
-              <span className={styles.expNumber}>+15</span>
+              <span className={styles.expNumber}>+{new Date().getFullYear() - CLINIC.founded}</span>
               <span className={styles.expText}>anos de cuidado e confiança</span>
             </div>
           </div>
@@ -62,9 +62,9 @@ export default function About() {
             </div>
 
             <p className="body-lg" style={{ marginBottom: "16px" }}>
-              Fundada em <strong>{CLINIC.founded}</strong>, a Odonto Science nasceu com o propósito de
+              Fundada em <strong>{CLINIC.founded}</strong>, a {CLINIC.name} nasceu com o propósito de
               oferecer odontologia de alta qualidade em Palmas-TO, unindo expertise técnica
-              com um atendimento verdadeiramente humanizado.
+              com um atendimento verdadeiramente humanizado na Praça dos Girassóis.
             </p>
             <p className="body-md" style={{ marginBottom: "32px" }}>
               Nossa equipe multidisciplinar acredita que cada sorriso é único e merece

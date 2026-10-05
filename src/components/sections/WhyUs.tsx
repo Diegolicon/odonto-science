@@ -21,7 +21,7 @@ export default function WhyUs() {
               Cuidado que você pode <span className={styles.accent}>confiar</span>
             </h2>
             <p className="body-lg" style={{ marginTop: "16px", marginBottom: "36px" }}>
-              Na Odonto Science, cada detalhe importa. Nossa missão é oferecer
+              Na {CLINIC.name}, cada detalhe importa. Nossa missão é oferecer
               tratamentos de excelência em um ambiente que inspira conforto e segurança.
             </p>
             <a

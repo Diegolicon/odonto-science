@@ -21,20 +21,20 @@ export default function Location() {
           {/* Map */}
           <div className={styles.mapWrap}>
             <iframe
-              src="https://maps.google.com/maps?q=Odonto+Science+Palmas+Tocantins&output=embed&hl=pt-BR&z=17"
+              src="https://maps.google.com/maps?q=Pra%C3%A7a+dos+Girass%C3%B3is,+Palmas+-+TO&output=embed&hl=pt-BR&z=16"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Localização Odonto Science — 103 Sul, Palmas TO"
+              title={`Localização ${CLINIC.name} — Praça dos Girassóis, Palmas TO`}
             />
           </div>
 
           {/* Info */}
           <div className={styles.info}>
-            <h3 className={styles.infoTitle}>Odonto Science</h3>
+            <h3 className={styles.infoTitle}>{CLINIC.name}</h3>
             <p className={styles.infoTagline}>{CLINIC.tagline}</p>
 
             <div className={styles.contactList}>
